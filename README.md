@@ -13,7 +13,7 @@ A functional React + Vite To-Do application built against the FAIE 100% blueprin
 - Persist tasks and theme preference with the `useLocalStorage` hook.
 - Render a clear empty state when a filter has no results.
 - Provide labelled icon-only controls, keyboard focus states, and WCAG-conscious contrast.
-- Animate task additions and removals with Framer Motion.
+- Animate task additions with lightweight CSS transitions and respect reduced-motion preferences.
 - Responsive mobile-first layout with light and dark themes.
 
 ## Architecture
@@ -22,6 +22,10 @@ A functional React + Vite To-Do application built against the FAIE 100% blueprin
 src/main.jsx
   -> TodoApp.jsx (single source of truth and CRUD handlers)
       -> components/TodoForm.jsx
+      -> components/AppHeader.jsx
+      -> components/TaskSummary.jsx
+      -> components/TaskPanel.jsx
+          -> components/TaskFilters.jsx
       -> components/TodoList.jsx
           -> components/TodoItem.jsx
       -> hooks/useLocalStorage.js

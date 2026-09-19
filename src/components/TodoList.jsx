@@ -8,9 +8,9 @@ function TodoList({ tasks, onToggleTask, onEditTask, onDeleteTask }) {
   return (
     <ul className="todo-list" aria-label="Tasks">
       {tasks.map((task) => (
-          <li className={`todo-item task-enter ${task.completed ? 'is-complete' : ''}`} key={task.id}>
-            <TodoItem task={task} onToggleTask={onToggleTask} onEditTask={onEditTask} onDeleteTask={onDeleteTask} />
-          </li>
+        <li className={`todo-item task-enter ${task.completed ? 'is-complete' : ''}`} key={task.id}>
+          <TodoItem task={task} onToggleTask={onToggleTask} onEditTask={onEditTask} onDeleteTask={onDeleteTask} />
+        </li>
       ))}
     </ul>
   );
