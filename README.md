@@ -10,11 +10,13 @@ A functional React + Vite To-Do application built against the FAIE 100% blueprin
 - Delete individual tasks and clear all completed tasks.
 - Filter the task list by All, Active, and Completed.
 - Prevent empty submissions with trimmed input validation.
+- Show an accessible validation message for empty submissions.
 - Persist tasks and theme preference with the `useLocalStorage` hook.
 - Render a clear empty state when a filter has no results.
 - Provide labelled icon-only controls, keyboard focus states, and WCAG-conscious contrast.
 - Animate task additions with lightweight CSS transitions and respect reduced-motion preferences.
 - Responsive mobile-first layout with light and dark themes.
+- Recover from unexpected render failures with an error boundary and refresh action.
 
 ## Architecture
 
@@ -44,5 +46,14 @@ Open the local URL printed by Vite. To create and preview a production build:
 npm run build
 npm run preview
 ```
+
+## Quality checks
+
+```bash
+npm run lint
+npm run build
+```
+
+The lint gate checks unused variables, undefined references, and unreachable code across all source modules.
 
 The project is ready to deploy to Vercel as a Vite static site. Use the default build command `npm run build` and output directory `dist`.

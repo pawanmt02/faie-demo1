@@ -3,13 +3,18 @@ import { useState } from 'react';
 
 function TodoForm({ onAddTask }) {
   const [taskText, setTaskText] = useState('');
+  const [validationMessage, setValidationMessage] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const trimmedText = taskText.trim();
-    if (!trimmedText) return;
+    if (!trimmedText) {
+      setValidationMessage('Please enter a task before adding it.');
+      return;
+    }
     onAddTask(trimmedText);
     setTaskText('');
+    setValidationMessage('');
   };
 
   return (
@@ -18,7 +23,10 @@ function TodoForm({ onAddTask }) {
       <input
         id="new-task"
         value={taskText}
-        onChange={(event) => setTaskText(event.target.value)}
+        onChange={(event) => {
+          setTaskText(event.target.value);
+          if (validationMessage) setValidationMessage('');
+        }}
         placeholder="What needs to be done?"
         maxLength={120}
         autoComplete="off"
@@ -27,6 +35,7 @@ function TodoForm({ onAddTask }) {
         <Plus size={20} />
         <span>Add task</span>
       </button>
+      {validationMessage && <p className="form-error" role="alert">{validationMessage}</p>}
     </form>
   );
 }
