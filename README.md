@@ -17,6 +17,7 @@ A functional React + Vite To-Do application built against the FAIE 100% blueprin
 - Animate task additions with lightweight CSS transitions and respect reduced-motion preferences.
 - Responsive mobile-first layout with light and dark themes.
 - Recover from unexpected render failures with an error boundary and refresh action.
+- Focus the task composer from the keyboard with `/` and memoize stable task rows.
 
 ## Architecture
 
@@ -31,6 +32,7 @@ src/main.jsx
       -> components/TodoList.jsx
           -> components/TodoItem.jsx
       -> hooks/useLocalStorage.js
+    -> utils/taskUtils.js (filtering and aggregate calculations)
 ```
 
 ## Run locally

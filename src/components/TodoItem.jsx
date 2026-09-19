@@ -1,5 +1,5 @@
 import { Check, Pencil, Save, Trash2, X } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 
 function TodoItem({ task, onToggleTask, onEditTask, onDeleteTask }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -49,4 +49,4 @@ function TodoItem({ task, onToggleTask, onEditTask, onDeleteTask }) {
   );
 }
 
-export default TodoItem;
+export default memo(TodoItem);
