@@ -1,4 +1,4 @@
-import { ListFilter, Trash2 } from 'lucide-react';
+import { ListFilter, Trash2 } from './Icon.jsx';
 import TaskFilters from './TaskFilters.jsx';
 import TodoList from './TodoList.jsx';
 

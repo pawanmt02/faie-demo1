@@ -1,4 +1,4 @@
-import { BarChart3 } from 'lucide-react';
+import { BarChart3 } from './Icon.jsx';
 
 function TaskSummary({ remainingCount, completedCount, totalCount }) {
   const completionRate = totalCount === 0 ? 0 : Math.round((completedCount / totalCount) * 100);

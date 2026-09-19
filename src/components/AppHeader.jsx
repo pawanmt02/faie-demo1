@@ -1,4 +1,4 @@
-import { CheckCircle2, Moon, Sun } from 'lucide-react';
+import { CheckCircle2, Moon, Sun } from './Icon.jsx';
 
 function AppHeader({ darkMode, onToggleTheme }) {
   return (

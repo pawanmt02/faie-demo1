@@ -1,4 +1,4 @@
-import { Check, Pencil, Save, Trash2, X } from 'lucide-react';
+import { Check, Pencil, Save, Trash2, X } from './Icon.jsx';
 import { memo, useEffect, useState } from 'react';
 
 function TodoItem({ task, onToggleTask, onEditTask, onDeleteTask }) {

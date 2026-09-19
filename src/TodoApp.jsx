@@ -1,4 +1,4 @@
-import { RotateCcw } from 'lucide-react';
+import { RotateCcw } from './components/Icon.jsx';
 import { useCallback, useMemo, useState } from 'react';
 import AppHeader from './components/AppHeader.jsx';
 import TaskPanel from './components/TaskPanel.jsx';
